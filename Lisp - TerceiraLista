@@ -1,0 +1,23 @@
+      <<< Lisp---exercicio-aula-28.02.2018 >>>
+---------- Exercício: Utilizando recursão-------------
+
+1 - Contagem de numeros pares de 0 até 100 
+
+(defun conta_par (ini) 
+	(print ini) 
+	(if (> ini 98) NIL (conta_par (+ ini 2))) 
+)
+
+2 - Imprime seu nome 'n' Vezes 
+
+(defun imprime_nome (n) 
+	(if (<= 0 (- n 1)) NIL (imprime_nome(- n 1))) 
+	(print "jefte") 
+)
+
+3 - Dado inicio, fim e passo (de quanto em quanto) fazer a contagem -> ex1: (contar 1 9 2 ) | ex2: (contar 0 1000 50)
+
+(defun contar (i f p) 
+	(if (> i f) NIL (print i)) 
+	(if (>= i f) NIL (contar (+ i p) f p))
+)
