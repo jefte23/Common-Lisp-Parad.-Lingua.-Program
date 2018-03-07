@@ -1,0 +1,57 @@
+(defun area_quadrado()
+  (print "Qual a largura do lado?")
+  (setq lado (read))
+  (setq area (expt lado 2))
+  (format t "O quadrado de lado ~d tem ~d de area" lado area)
+)
+
+--
+
+(defun maior ()
+  (print "Qual a idades?")  
+  (setq idade (read))
+  (if (< idade 18) "de menor" "de maior")
+)
+
+--
+
+(defun parimpar()
+  (print "Qual o número?")
+  (setq numero (read))
+  (setq par (= 0 (mod numero 2)))  
+  (if par "Número Par" "Número Impar")
+)
+
+--
+
+1) Faça uma função que receba dois números e mostre qual é o maior
+(defun retorna_maior()
+	(print "informe o primeiro numero: ")
+	(setq num1 (read))
+	(print "informe o primeiro numero: ")
+	(setq num2 (read))
+	(setq maior (if (>= num1 num2) num1 num2))
+	(format t "O maior valor entre ~d e ~d é ~d" num1 num2 maior)
+)
+
+2) Faça uma função que receba a base e a altura e mostre a área do triângulo
+(defun area_triangulo ()
+	(print "informe a base do triangulo: ")
+	(setq base (read))
+	(print "informe a altura do triangulo: ")
+	(setq altura (read))
+	(setq area (/ (* base altura) 2))
+	(format t "O triangulo de base ~d e altura ~d é de ~d" base altura area)
+)
+
+3) Faça uma função que receba um capital e os juros (em porcentagem) e calcule o valor total com os rendimentos.
+(defun rendimentos()
+	(print "informe o capital: ")
+	(setq capital(read))
+	(print "infome os juros (%): ")
+	(setq juros(read))
+	(setq percent (+ 1 (/ juros 100)))
+	(setq rendimento (* capital percent))
+	(format t "O rendimento foi de ~d" rendimento)
+)
+
