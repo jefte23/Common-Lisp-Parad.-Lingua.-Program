@@ -1,0 +1,17 @@
+(defun meio(lista)
+	(if (= (length lista) 0) (print "lista vazia")
+		(if (= (mod (length lista) 2) 0) (print(lista1 0 lista)) (print "Não posso fazer a operação"))
+	)	
+)
+
+(defun lista1(lista n)
+   (if (= lista 0) (print "Primeira lista"))
+	(print (elt n lista))
+	(if (< lista (- (/ (length n) 2) 1)) (lista1 (+ lista 1) n) (lista2 (+ lista 1) n))
+)
+
+(defun lista2(lista n)
+	(if (= lista (/ (length n) 2)) (print "Segunda lista"))
+	(print (elt n lista))
+	(if (< lista (- (length n) 1)) (lista2 (+ lista 1) n))
+) 
