@@ -1,0 +1,11 @@
+(defun meio(lista)
+	(setq valor (length lista))
+	(if (= valor 0) "lista vazia")
+	(if (= (mod valor 2)0) "imprime lista" "Não posso fazer a operação")
+)
+
+(defun imprime(lista) (valor)
+	(setq meio (/ (length lista) 2))
+	(if (> meio  0) (imprime lista))
+	print(valor)
+)
