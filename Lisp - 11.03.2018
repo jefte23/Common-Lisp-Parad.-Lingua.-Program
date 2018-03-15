@@ -11,7 +11,7 @@
 )
 
 (defun lista2(lista n)
-	(if (= lista (/ (length n) 2)) (print "Segunda lista"))
+   (if (= lista (/ (length n) 2)) (print "Segunda lista"))
 	(print (elt n lista))
 	(if (< lista (- (length n) 1)) (lista2 (+ lista 1) n))
 ) 
