@@ -1,0 +1,30 @@
+Prelude> let contrario=['z','y'..'a']
+Prelude> contrario
+"zyxwvutsrqponmlkjihgfedcba"
+Prelude> let valor=10
+Prelude> let passo=5
+Prelude> let fim=100
+Prelude> let lista8=[valor,valor + passo..fim]
+Prelude> lista8
+[10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100]
+Prelude> let n = 30
+Prelude> let listaPar=[2,4..(2*n)]
+Prelude> listaPar
+[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60]
+Prelude> True && True
+True
+Prelude> True && False
+False
+Prelude> False && True
+False
+Prelude> False && False
+False
+Prelude> True || False
+True
+Prelude> True || True
+True
+Prelude> False || True
+True
+Prelude> False || False
+False
+Prelude> True not True
