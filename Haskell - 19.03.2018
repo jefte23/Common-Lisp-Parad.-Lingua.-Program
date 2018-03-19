@@ -1,0 +1,16 @@
+2) Mostrar os primeiros 30 números ímpares
+
+contarImpar :: Integer -> IO()
+contarImpar 1 = do print 1
+contarImpar n = if (n<1) then print "Nao ha impares"
+                else if ((mod n  3) /= 0) then print "Informou numero invalido"
+                     else do contarImpar (n-3)
+                             print n
+
+3) Mostrar os "N" primeiros múltiplos de 3
+
+multTres :: Integer -> IO()
+multTres 3 = do print 3
+multTres n = if (n<3) then print "Nao ha lista"
+             else do multTres (n -3)
+                     print
