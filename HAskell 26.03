@@ -1,0 +1,45 @@
+1) Crie uma lista numérica com os múltiplos de 5 de 0 a 100.
+
+Prelude> let multCinco = [0, 5 .. 100]
+Prelude> multCinco
+[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100]
+
+2) Crie uma lista alfanumérica com os caracteres ASC.
+
+Prelude> let listaASC = ["A", "B", "c", "7", "8", "9", "e"]
+Prelude> listaASC
+["A","B","c","7","8","9", "e"]
+
+3) Crie uma lista com 7 elementos e a partir dessa lista mostre o primeiro e último elementos
+
+Prelude> let listaASC = ["A", "B", "c", "7", "8", "9", "e"]
+Prelude> listaASC !! 0
+"A"
+listaASC !! 6
+"e"
+
+4) Crie uma lista com 6 elementos e divida a mesma em dois conjuntos com a mesma quantidade de elementos
+
+Prelude> let lista = [1, 2.. 6] 
+Prelude> lista
+[1,2,3,4,5,6]
+Prelude> splitAt 3 lista
+([1,2,3],[4,5,6])
+
+5) Crie uma lista com os números de 1 a 10 e depois some todos os elementos
+
+Prelude> let listaSoma = [1, 2..10]
+Prelude> sum listaSoma
+55
+
+6) Crie uma lista com 10 elementos em que cada elemento tenham 0.5 de intervalo
+
+Prelude> n = 10
+Prelude> let listaFloat = [0.5, 1..(n/2)]
+Prelude> listaFloat
+[0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0,4.5,5.0]
+
+7) Crie uma lista de listas e depois verifique use o operador `elem` para uma resposta True e outra False
+
+
+Prelude> listaDois = [listaSoma, lista]
