@@ -1,0 +1,59 @@
+1) Faça uma função que empilhe (Pilha ED). 
+Esta deve receber a "lista-pilha" e o elemento a ser empilhado.
+
+empilha :: [Int] -> Int -> [Int]
+empilha pilha x = pilha ++ [x]
+
+
+
+
+	
+2) Faça uma função que desempilhe (Pilha ES). 
+Esta deve receber a "lista-pilha", imprimir o elemento desempilhado 
+e devolver a lista sem o elemento impresso.
+
+desempilha:: [Int] -> [Int]
+desempilha [] = print "pilha vazia"
+desempilha (x: xs) | (x == (top (x:xs))) = xs
+                   | otherwise = x:(desempilha xs)
+
+
+
+
+3) Faça uma função que receba uma lista com números inteiros entre 
+0 e 9 e imprima os números por extenso na ordem em que forem encontrados na lista fornecida como parâmetro
+	
+imprimir :: [Integer] -> IO()
+imprimir [] = print "fim"
+imprimir (h:t) | (h==0) = do print "zero"
+                             imprimir t
+               | (h==1) = do print "um"
+                             imprimir t
+               | (h==2) = do print "dois"
+                             imprimir t
+               | (h==3) = do print "tres"
+                             imprimir t
+               | (h==4) = do print "quatro"
+                             imprimir t
+               | (h==5) = do print "cinco"
+                             imprimir t
+               | (h==6) = do print "seis"
+                             imprimir t
+               | (h==7) = do print "sete"
+                             imprimir t
+               | (h==8) = do print "oito"
+                             imprimir t
+               | (h==9) = do print "nove"
+                             imprimir t
+               | otherwise = do print "invalido"
+                                imprimir t
+
+
+Prelude> :load "imprime.hs"
+[1 of 1] Compiling Main             ( imprime.hs, interpreted )
+Ok, 1 module loaded.
+*Main> imprimir [1 ,2 ,3]
+"um"
+"dois"
+"tres"
+"fim"
