@@ -22,5 +22,5 @@ for contar in range(ini, fim+1, inter):
 
 nome = str(input("infome um nome: "))
 qnt = int(input("Informe quantidade de vezes: "))
-for imprime in range(0, qnt+1):
+for imprime in range(0, qnt):
     print(nome)
