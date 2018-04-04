@@ -1,0 +1,26 @@
+#1) Imprima uma contagem de 10 até 0 de -1 em -1
+
+for contar in range(10,-1,-1):
+    print(contar)
+
+#2) Imprima os primeiros 50 números pares
+
+n=50
+for imprime in range(2,(n*2)+1,2):
+    print(imprime)
+
+#3) Receba (pelo teclado) um número inicial, número final e passo (de quanto em quanto)
+# e imprima uma contagem de início até o fim de passo em passo.
+
+ini = int(input("informe valor inicial: "))
+fim = int(input("infome valor final: "))
+inter = int(input("informe o intervalo de contagem: "))
+for contar in range(ini, fim+1, inter):
+    print(contar)
+
+#4) Receba um quantidade de vezes e um nome e imprima o nome a quantidade de vezes informada.
+
+nome = str(input("infome um nome: "))
+qnt = int(input("Informe quantidade de vezes: "))
+for imprime in range(0, qnt+1):
+    print(nome)
