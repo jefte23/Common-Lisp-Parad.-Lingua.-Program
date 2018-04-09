@@ -1,0 +1,22 @@
+#imprime circulo
+def main():
+    win = GraphWin("My Circle", 460, 460)
+    for imprime in range(9, 188, 6):
+        c = Circle(Point(230,230), imprime)
+        c.draw(win)
+    win.getMouse() # pause for click in window
+    win.close()
+main()
+
+
+#imprime quadrado
+
+from graphics import *
+def main():
+    win = GraphWin("My rectangle", 630, 630)
+    for imprime in range(0, 610, 10):
+        r = Rectangle(Point(600 - imprime, 600 - imprime), Point(10 + imprime , 10 + imprime))
+        r.draw(win)
+    win.getMouse() # pause for click in window
+    win.close()
+main()
