@@ -1,0 +1,19 @@
+#1) Faça um programa para contar de 0 até 100 de 2 em 2
+
+for imprime in range(0, 101, 2):
+    print(imprime)
+
+#2) Faça um programa para contar de 10 até 1 de -1 em -1
+
+for contaDecrescente in range(10,-1,-1):
+    print (contaDecrescente)
+
+#3) Faça um programa para contar de 0 até 150 de 5 em 5
+
+for contar in range(0,151,5):
+    print(contar)
+
+#4) Faça um programa para contar de 500 até 0 de -100 em -100
+
+for contar in range(500,-1,-100):
+    print(contar)
