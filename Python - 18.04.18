@@ -1,0 +1,31 @@
+from graphics import *
+win = GraphWin("Ponto", 300, 300)
+
+for x in range(5, 295, 2):
+    for y in range(5, 295, 10):
+        win.plot(y, x, "blue")
+
+win.getMouse()
+win.close()
+
+
+#----------------------------------------------------
+
+from graphics import *
+win = GraphWin("Ponto", 300, 300)
+
+for x in range(5, 295, 10):
+    for y in range(5, 295, 2):
+        win.plot(y, x, "blue")
+
+win.getMouse()
+win.close()
+
+#----------------------------------------------------
+
+from graphics import *
+win = GraphWin("inversa", 300, 300)
+for x in range(5, 295, 5):
+    win.plot(299 - x, x, "blue")
+win.getMouse()
+win.close()
