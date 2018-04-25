@@ -1,0 +1,20 @@
+#teste randomico
+from random import *
+
+print("randint: ", randint(0,11))
+
+print("randrange: ", randrange(2,11,2))
+
+print ("choice: ", choice ("ABCDEFGH"))
+
+
+x = [[i] for i in range(10)]
+
+print("Lista ", x)
+shuffle(x)
+print("Lista ", x)
+
+meu_nome=["H", "I", "R", "A", "G", "I"]
+
+shuffle(meu_nome)
+print(meu_nome)
