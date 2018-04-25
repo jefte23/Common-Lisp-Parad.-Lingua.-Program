@@ -1,0 +1,63 @@
+#teste randomico
+from random import *
+
+print("randint: ", randint(0,11))
+
+print("randrange: ", randrange(2,11,2))
+
+print ("choice: ", choice ("ABCDEFGH"))
+
+
+x = [[i] for i in range(10)]
+
+print("Lista ", x)
+shuffle(x)
+print("Lista ", x)
+
+meu_nome=["H", "I", "R", "A", "G", "I"]
+
+shuffle(meu_nome)
+print(meu_nome)
+
+#----------------------------
+
+from random import *
+
+for y in range(0,10000):
+    for x in range(0,250):
+        print(randint(0,9), end="")
+    print("")
+
+#----------------------------
+
+from random import *
+
+num_secreto = randint(0, 100)
+tentativa = 1
+tentar = True
+
+while tentar:
+    num_palpite = int(input("\n tentativa: " + str(tentativa) + ". Qual o numero (0 - 100): "))
+    if(num_secreto == num_palpite):
+        print("\n Você acertou em " + str(tentativa) + " tentativa(s). O numero é " + str(num_secreto))
+        tentar=False
+    elif num_secreto > num_palpite:
+        print("\n Não acertou, é um numero maior")
+    else:
+        print("\n Não acertou, é um número menor")
+    tentativa = tentativa + 1
+
+#----------------------------
+
+from random import *
+from graphics import *
+
+win = GraphWin("Circulos Randômicos", 500, 300)
+cores = ["blue", "red", "green", "yellow", "black", "orange", "pink"]
+for qtd in range(0, randint(10, 100)):
+    cir = Circle(Point(randint(50, 450), randint(50, 250)), randint(5, 50))
+    cir.setOutLine(cores[randint(0, 6)])
+    cir.draw(win)
+
+win.getMouse()
+win.close()
