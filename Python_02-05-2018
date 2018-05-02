@@ -1,0 +1,65 @@
+#1) Peça um número e verifica se o mesmo esta na faixa de 10 até 100
+
+entrada = input("Digite o número entre 10 e 100: ")
+
+if entrada.isdigit():
+    entrada = int(entrada)
+    if entrada < 10 and entrada > 100:
+        print("Valor informado invalido")
+    else:
+        print("O valor informado foi ", entrada)
+else:
+    print("Numero Invalido")
+
+------------------
+
+#2) Peça uma String e verifica se a mesma foi informada e se tem pelo menos 3 caracteres
+
+entrada = input("Infome uma entrada de texto: ")
+if len(entrada)==0:
+    print("Entrada vazia")
+elif len(entrada)<3:
+    print("Entrada Invalida")
+else:
+    print("Entrada Valida, O valor informado foi: ", entrada)
+
+------------------
+
+#3) Peça uma Data no formato Brasileiro (DD/MM/AAAA) e informe se a data é ou não válida
+
+
+entrada = input("infome uma data (DD/MM/AAAA): ")
+
+dia = entrada[0:2]
+valido = "true"
+i = 0
+while valido == "true" and i == 0:
+    if dia.isdigit():
+        diaInt = int(dia)
+        if diaInt < 0 or diaInt > 31:
+            valido = "false"
+
+    mes = entrada[3:5]
+    if mes.isdigit():
+        mesInt = int(mes)
+        if mesInt < 0 or mesInt > 12:
+            valido = "false"
+
+    ano = entrada[6:10]
+    if ano.isdigit():
+        anoInt = int(ano)
+
+    caracter1 = entrada[2]
+    if caracter1 != "/":
+        valido = "false"
+
+    caracter2 = entrada[5]
+    if caracter2 != "/":
+        valido = "false"
+    i= i + 1
+
+if valido == "true":
+    print("Data informada é valida" )
+    print(entrada)
+else:
+    print ("data informada não é valida")
