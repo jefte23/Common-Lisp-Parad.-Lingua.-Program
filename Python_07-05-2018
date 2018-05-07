@@ -1,0 +1,40 @@
+#1) O usuário informa um número e o programa responde dizendo se o número é primo ou não é primo.
+
+valor = input("informe um numero inteiro: ")
+num = int(valor)
+contador = 1;
+
+for numero in range(1, num):
+   if ((num % numero) == 0):
+       contador += 1
+
+if (contador > 2):
+   print("o numero informado não é primo")
+else:
+   print ("o numero informado é primo")
+
+
+-------------------------------------
+
+# 2) O usuário informa a quantidade de números primos que deseja obter a partir de 2 e o programa responde listando no
+# console "n" números primos a partir de 2 conforme a quantidade pretendida pelo usuário.
+
+def primo(numero):
+   num_vezes = 0
+   contar = 1
+   while contar <= numero:
+       if numero % contar == 0:
+            num_vezes += 1
+       contar += 1
+   if num_vezes == 2:
+       return True
+   else:
+       return False
+
+qtd_primos = int(input("Informe numero inteiro para consulta: "))
+numero = 3
+while qtd_primos > 0:
+   if primo(numero):
+       print(numero)
+       qtd_primos = qtd_primos - 1
+   numero = numero + 1
