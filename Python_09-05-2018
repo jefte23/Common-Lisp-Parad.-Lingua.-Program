@@ -1,0 +1,45 @@
+# O programa deve receber três números: número inicial, número final e passo (de quanto em quanto).
+# Após receber estes números fazer as devidas validações:
+
+# - Devem ser informados números inteiros para número inicial, número final e passo
+# - O número inicial mais o passo não pode ser maior que o número final
+# - O número final menos o número inicial dividido pelo passo deve dar resto zero
+
+# Se a entrada de dados passar pelas validações imprimir uma contagem crescente de número inicial até
+# número final de passo em passo.
+
+validador = 0
+inicial = input("informe um valor inicial(inteiro) para o contador: ")
+while validador == 0:
+    if inicial.isdigit():
+        ini = int(inicial)
+        validador = 1
+    else:
+        inicial = input("Valor invalido! Informe um valor inicial(inteiro) para o contador: ")
+
+passo = input("Infome um valor inteiro para o passo: ")
+while validador == 1:
+    if passo.isdigit():
+        ps = int(passo)
+        validador = 0
+    else:
+        passo = input("Valor invalido! Informe um valor inicial(inteiro) para o contador: ")
+
+final = input("informe um valor final para o contador: ")
+
+while validador == 0:
+    if final.isdigit():
+        fim = int(final)
+        if ((fim <= ini) or (fim <= (ini + ps))):
+            final = input("Valor invalido! Informe um valor final(inteiro) para o contador: ")
+        elif ((fim - ini) % ps != 0):
+            final = input("Valor invalido! Informe um valor final(inteiro) para o contador: ")
+        else:
+            validador = 1
+    else:
+        final = input("Valor invalido! Informe um valor final(inteiro) para o contador: ")
+
+
+
+for contar in range(ini, fim + 1, ps):
+    print(contar)
