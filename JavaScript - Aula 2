@@ -1,0 +1,157 @@
+<!--   
+	Criar uma página index com as opções:
+	
+	Botão com uma ação simples
+	Imprimir "n" vezes
+	Cálculos aritméticos>
+	
+	2) Criar outra página para a primeira opção, onde apareça um botão que quando clicado mostre a data corrente.
+	
+	3) Criar outra página para a segunda opção, onde apareça duas caixas de texto uma para um nome e outra para a
+	 quantidade de vezes que se deseja imprimir o nome e por fim um botão que dispara a ação de imprimir.
+	
+	4) Criar outra página para a terceira opção, que contenha duas caixas de texto para receber dois números e 
+	um botão que dispara a ação para mostrar o resultado das quatro operações aritméticas.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Excercicio Um</title>
+	</head>
+	<body>
+	
+	<h2 align="center">Basico de JavaScript</h2>
+	
+		<div>
+			<p><a href="botao.html">Botão com uma ação simples</a> </p>
+			<p><a href="imprimir.html">Imprime 'n' Vezes</a></p>
+			<p><a href="calcular.html">Cálculos aritméticos</a> </p>
+			<p><a href="data.html">imprime data</a> </p>
+		</div>
+	
+	</body>
+</html>
+----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Exibe Mensagem</title>
+	
+	<script type="text/javascript">
+	
+		function imprime() {
+
+			document.getElementById("demo").innerHTML = "Hello World!!!";
+		}
+		
+	</script>
+	
+</head>
+<body>
+
+	<p><button type="button" onclick="imprime()">Msg Boas Vindas</button> </p>
+	<p id="demo"></p>
+	
+</body>
+</html>
+----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+	<title>Imprime n vezes</title>
+
+	<script type="text/javascript">
+		
+		function imprimir() {
+			
+			n = document.getElementById("nome").value;
+			v = parseInt(document.getElementById("vezes").value);
+			resultado ="";
+			
+			for (var i = 0; i < v; i++) {
+				resultado = resultado + n + "<br />";
+			}
+			
+			document.getElementById("saida").innerHTML=resultado;
+		}
+	</script>
+</head>
+<body>
+	
+	<div>
+		Nome: <input type=text id="nome">
+		<br>
+		Qtd Vezes: <input type="number" id="vezes" size="3">
+		<br>
+		<button id="botao" onclick="imprimir()">Imprimir</button>
+
+    	<p id="saida"></p>
+
+	</div>
+</body>
+</html>
+
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Calcula</title>
+	
+	<script type="text/javascript">
+
+		function calcular(){
+	        s1 = parseFloat(document.getElementById("txt1").value);
+	        s2 = parseFloat(document.getElementById("txt2").value);
+	        resultado = "Soma: " + (s1 + s2) + "<br/>";
+	        resultado += "Subtração: " + (s1 - s2) + "<br/>";
+	        resultado += "Multiplicação: " + (s1 * s2) + "<br/>";
+	        resultado += "Divisão: " + (s1 / s2) + "<br/>";
+	        
+	        document.getElementById("saida").innerHTML=resultado;
+	    }
+    	</script>
+</head>
+<body>
+
+	Valor 1: <input id="txt1" type="number" size="5"> <br>
+    Valor 2: <input id="txt2" type="number" size="5"> <br>
+    <button id="botao" onclick="calcular()">Multiplica</button>
+    
+    <p id="saida"></p>
+
+</body>
+</html>
+----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data Atual</title>
+	<script type="text/javascript">
+		
+	function data() {
+		
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+
+		var data = today + "/" + dd + "/" + mm
+		
+		document.getElementById("saida").innerHTML=data;
+	}
+
+		
+	</script>
+</head>
+<body>
+
+    <button id="botao" onclick="data()">data</button>
+    
+    <p id="saida"></p>
+</body>
+</html>
