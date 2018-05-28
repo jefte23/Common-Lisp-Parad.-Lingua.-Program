@@ -1,0 +1,50 @@
+<!-- usuario seleciona o quanto deseja de Red, Green e Blue e então apresenta isso em um comportamento visual visual na pagina. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>cor da tela</title>
+
+	<script type="text/javascript">
+
+		function mudaCor() {
+				
+				var x = document.getElementById("red").value
+				var y = document.getElementById("green").value 
+				var z = document.getElementById("blue").value 
+			
+				var rgb = "rgb(" + x + "," + y + "," + z + ")"; 
+			    
+				document.getElementById("saida").innerHTML = rgb;
+			    document.body.style.background = rgb;
+			    
+		}
+
+	</script>
+
+</head>
+	<body>
+
+		<div>
+				<div>
+					<label>RED: <i>entre 0 e 255</i></label>
+					<input id="red" type="number" size="4" max=255 min=0>				
+				</div><br />
+	
+				<div>
+					<label>GREEN: <i>entre 0 e 255</i></label>
+					<input id="green" type="number" size="4" max=255 min=0>
+				</div><br />
+	
+				<div>
+					<label>BLUE: <i>entre 0 e 255</i></label>
+					<input id="blue" type="number" size="4" max=255 min=0>
+				</div><br />		
+	
+				<button id="botao" onclick="mudaCor()">Muda Cor</button>
+		</div>		
+				<h5>RGB: <spam id="saida"></spam></h5>
+
+	</body>
+</html>
