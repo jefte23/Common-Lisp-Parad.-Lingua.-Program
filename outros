@@ -1,0 +1,75 @@
+<!-- 
+1 -Permita mostrar um texto conforme a configuração de fontes. 
+Deve ser possível o usuario selecionar propriedades como a fonte, 
+tamanho, negrito e italico. 
+
+2 - Permita mostrar uma <div> "caixa" em que as bordas sejam configuráveis
+pelo usuario, entre as propriedades que podem ser configuradas temos:
+largura, cor, estilo e cantos (arredondamento).
+-->
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>alterações na caixa < div > </title>
+
+	<script type="text/javascript">
+			
+		function corInterna() {
+			cor = document.getElementById("cor").value;
+			
+			document.getElementById('myDiv').style.background = cor;
+			document.getElementById("saida2").innerHTML = borda;
+		}
+	
+	
+		function tipoBorda(selectTag) {
+			
+			var borda = selectTag.options[selectTag.selectedIndex].text;
+			var tipBoarda = borda + " " + "#000000";
+		    document.getElementById("myDiv").style.border = borda;
+		    document.getElementById("saida").innerHTML = borda;
+		}
+		
+	
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="page-header"><h1>Configurações</h1></div>
+		</div>
+		
+		<label>Cor interna: </label>
+			<input type="color" id="cor">
+			<button class="glyphicon glyphicon-repeat" onclick="corInterna()"></button>
+					
+			<label>Tipo de borda: </label>
+				<select onchange=tipoBorda(this)>
+					<option>dotted</option>
+		  			<option>dashed</option>
+		  			<option>solid</option>
+		  			<option>double</option>
+		  			<option>groove</option>
+		  			<option>ridge</option>
+		  			<option>inset</option>
+		  			<option>outset</option>
+		  			<option>none</option>
+		  			<option>hidden</option>
+				</select>
+			</div>
+			<br />			
+			
+			<div id="myDiv" style="background-color:#F2F2F2; height:300px; width:300px;"></div>
+		
+		<br />
+</div>
+
+</body>
+</html>
